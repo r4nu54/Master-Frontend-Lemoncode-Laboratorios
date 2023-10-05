@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #333333;
+  text-align: center;
+  & .container {
+    margin: 2rem auto;
+  }
+  & h1 {
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.container {
+  display: flex;
+  place-content: center;
+  width: 90vw;
+  & .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 150px;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+  }
+  & span {
+    color: #ffffff;
+    font-size: 1rem;
+  }
+}
+
+$base-color: #0051ff;
+
+$darken-1: darken($base-color, 10%);
+$darken-2: darken($base-color, 20%);
+$darken-3: darken($base-color, 30%);
+$darken-4: darken($base-color, 40%);
+
+$lighten-1: lighten($base-color, 10%);
+$lighten-2: lighten($base-color, 20%);
+$lighten-3: lighten($base-color, 30%);
+$lighten-4: lighten($base-color, 40%);
+
+.box.darken-1 {
+  background-color: $darken-1;
+}
+
+.box.darken-2 {
+  background-color: $darken-2;
+}
+
+.box.darken-3 {
+  background-color: $darken-3;
+}
+
+.box.darken-4 {
+  background-color: $darken-4;
+}
+
+.box.base-color {
+  background-color: $base-color;
+}
+
+.box.lighten-1 {
+  background-color: $lighten-1;
+}
+
+.box.lighten-2 {
+  background-color: $lighten-2;
+}
+
+.box.lighten-3 {
+  background-color: $lighten-3;
+}
+
+.box.lighten-4 {
+  background-color: $lighten-4;
+}
