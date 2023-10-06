@@ -1,0 +1,71 @@
+@use 'base.scss';
+
+$color-primary: #efefef;
+$color-secondary: #4cbf37;
+$color-border: #adadad;
+$color-text: #333;
+$color-link: #007bff;
+
+.container {
+  display: flex;
+  place-content: center;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 20px;
+  width: 300px;
+  height: 80vh;
+  background-color: $color-primary;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  h5 {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    color: $color-secondary;
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+
+  p {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    color: $color-text;
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+
+  p.card-pubdate {
+    font-size: 12px;
+    color: $color-text;
+    grid-column: 1 / 2;
+    grid-row: 3;
+  }
+
+  button {
+    color: $color-link;
+    text-decoration: none;
+    grid-column: 1 / 2;
+    grid-row: 4;
+
+    &:hover {
+      color: darken($color-link, 10%);
+    }
+  }
+}

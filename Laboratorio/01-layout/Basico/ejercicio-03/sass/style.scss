@@ -14,21 +14,24 @@ $text-color: #fff;
   }
 }
 
-ul {
+.navbar {
   display: flex;
-  justify-content: space-between;
-  // font-size: 1.2rem;
+  justify-content: space-around;
+  font-size: 1.2rem;
   background-color: $primary-color;
   li {
     list-style: none;
+    width: 20%;
     background-color: $primary-color;
     padding: 1rem 0.5rem;
     color: $text-color;
     text-decoration: none;
     &:hover {
-      color: $primary-color;
       cursor: pointer;
       background-color: $secondary-color;
+      a {
+        color: $primary-color;
+      }
     }
     a {
       color: $text-color;
@@ -37,9 +40,13 @@ ul {
   }
 }
 
-@media screen and (width < 468) {
-  ul {
+@media screen and (width <= 600) {
+  .navbar {
     font-size: 1.5rem;
     flex-direction: column;
+    li {
+      width: 100%;
+      text-align: center;
+    }
   }
 }

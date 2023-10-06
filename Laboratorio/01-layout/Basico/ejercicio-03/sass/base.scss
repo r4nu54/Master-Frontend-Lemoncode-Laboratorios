@@ -23,7 +23,7 @@ body {
   }
 }
 
-@media screen and (width < 468) {
+@media screen and (width <= 600) {
   body {
     h1 {
       font-size: 1.5rem;

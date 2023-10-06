@@ -22,7 +22,7 @@ body h1 {
   font-size: 2rem;
 }
 
-@media screen and (width < 468px) {
+@media screen and (width <= 600px) {
   body h1 {
     font-size: 1.5rem;
   }
@@ -39,35 +39,45 @@ body h1 {
   align-self: flex-start;
 }
 
-ul {
+.navbar {
   background-color: #006a7d;
-  justify-content: space-between;
+  justify-content: space-around;
+  font-size: 1.2rem;
   display: flex;
 }
 
-ul li {
+.navbar li {
   color: #fff;
   background-color: #006a7d;
+  width: 20%;
   padding: 1rem .5rem;
   text-decoration: none;
   list-style: none;
 }
 
-ul li:hover {
-  color: #006a7d;
+.navbar li:hover {
   cursor: pointer;
   background-color: #d8d800;
 }
 
-ul li a {
+.navbar li:hover a {
+  color: #006a7d;
+}
+
+.navbar li a {
   color: #fff;
   text-decoration: none;
 }
 
-@media screen and (width < 468px) {
-  ul {
+@media screen and (width <= 600px) {
+  .navbar {
     flex-direction: column;
     font-size: 1.5rem;
+  }
+
+  .navbar li {
+    text-align: center;
+    width: 100%;
   }
 }
 

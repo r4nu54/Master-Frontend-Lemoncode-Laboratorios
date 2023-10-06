@@ -1,6 +1,8 @@
 
 *node_modules
+*parcel-cache
+*.pdf
+*.zip
+*.md
 
-/Laboratorio/01-layout/Basico/Ejercicio-1/.parcel-cache
-/Laboratorio/01-layout/Basico/Ejercicio-2/.parcel-cache
-/Laboratorio/01-layout/Basico/ejercicio-3/.parcel-cache
+/Playgrounds
