@@ -1,0 +1,45 @@
+@use 'base.scss';
+
+$primary-color: #006a7d;
+$secondary-color: #d8d800;
+$text-color: #fff;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90vw;
+  h2 {
+    align-self: flex-start;
+  }
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  // font-size: 1.2rem;
+  background-color: $primary-color;
+  li {
+    list-style: none;
+    background-color: $primary-color;
+    padding: 1rem 0.5rem;
+    color: $text-color;
+    text-decoration: none;
+    &:hover {
+      color: $primary-color;
+      cursor: pointer;
+      background-color: $secondary-color;
+    }
+    a {
+      color: $text-color;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (width < 468) {
+  ul {
+    font-size: 1.5rem;
+    flex-direction: column;
+  }
+}

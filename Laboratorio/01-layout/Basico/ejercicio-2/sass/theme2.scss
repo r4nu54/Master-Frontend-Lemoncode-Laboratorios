@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@200;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@1,200;1,300;1,400;1,500&display=swap');
+
+$primary-color: #0000ff;
+$secondary-color: #000068;
+$tertiary-color: #00ffff;
+
+$text-color: #ffffff;
+
+$primary-font: 'Big Shoulders Stencil Display', cursive;
+$secondary-font: 'Advent Pro';
+
+$box-shadow: rgba(0, 0, 0, 0.8) 5px 5px 8px;
+
+.base {
+  background-color: $primary-color;
+  color: $text-color;
+}
+.important {
+  background-color: $secondary-color;
+  color: $text-color;
+}
+.warning {
+  background-color: $tertiary-color;
+  color: $text-color;
+}
+
+.primaryFont {
+  font-family: $primary-font;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.secondaryFont {
+  font-family: $secondary-font;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.box {
+  box-shadow: $box-shadow;
+}
