@@ -1,6 +1,4 @@
 
 *node_modules
 *parcel-cache
-*.pdf
-*.zip
-*.md
+*dist

@@ -5,87 +5,110 @@
 }
 
 body {
-  text-align: center;
-  background-color: #f5f5f5;
-  height: 100vh;
+  background-color: #fff;
   font-family: Open Sans, sans-serif;
-  overflow: hidden;
 }
 
 body .container {
-  margin: 2rem auto;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  margin: 2rem;
+  display: grid;
 }
 
 body h1 {
   color: #333;
+  text-align: center;
   margin: 2rem 0;
   font-size: 2rem;
 }
 
-@media screen and (width <= 600px) {
-  body h1 {
-    font-size: 1.5rem;
+@media (width < 956px) {
+  body .container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.container {
-  place-content: center;
-  display: flex;
+@media (width < 655px) {
+  body .container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
-  grid-gap: 20px;
-  background-color: #efefef;
-  border-radius: 10px;
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: 1fr;
-  width: 300px;
-  height: 80vh;
-  margin-bottom: 20px;
-  padding: 20px;
+  grid-template-rows: 11rem 17.3rem;
+  grid-template-areas: "card-img"
+                       "card-body";
+  max-width: 18rem;
+  max-height: 28rem;
   display: grid;
 }
 
-@media (width <= 768px) {
-  .card {
-    width: 100%;
-  }
-}
-
-.card-img-top {
+.card .card-img {
   object-fit: cover;
+  border-radius: .8rem .8rem 0 0;
+  grid-area: card-img;
   width: 100%;
-  height: 200px;
+  height: 100%;
 }
 
-.card-body h5 {
-  color: #4cbf37;
-  grid-area: 1 / 1 / auto / 2;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
+.card .card-body {
+  background-color: #fef4d9;
+  border-radius: 0 0 .8rem .8rem;
+  grid-area: card-body;
+  grid-template-rows: 3rem 9rem 2rem 3.2rem;
+  grid-template-areas: "title"
+                       "description"
+                       "pubdate"
+                       "link";
+  width: 100%;
+  height: 100%;
+  display: grid;
 }
 
-.card-body p {
+.card .card-body .card-title {
   color: #333;
-  grid-area: 2 / 1 / auto / 2;
+  grid-area: title;
+  align-self: center;
+  padding: .5rem;
   font-family: Roboto, sans-serif;
-  font-size: 16px;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
-.card-body p.card-pubdate {
+.card .card-body .card-text {
   color: #333;
-  grid-area: 3 / 1 / auto / 2;
-  font-size: 12px;
+  grid-area: description;
+  padding: 0 .5rem;
+  font-size: .8rem;
 }
 
-.card-body button {
-  color: #007bff;
-  grid-area: 4 / 1 / auto / 2;
-  text-decoration: none;
+.card .card-body .card-pubdate {
+  color: #333;
+  text-align: end;
+  grid-area: pubdate;
+  place-self: center;
+  width: 90%;
+  font-size: .75rem;
 }
 
-.card-body button:hover {
-  color: #0062cc;
+.card .card-body .btn {
+  cursor: pointer;
+  color: #333;
+  background-color: #d8d800;
+  border: none;
+  border-radius: .5rem;
+  grid-area: link;
+  justify-self: center;
+  width: 90%;
+  margin: .7rem 0;
+  font-size: 1rem;
+}
+
+.card .card-body .btn:hover {
+  color: #d8d800;
+  background: #333;
 }
 
 /*# sourceMappingURL=index.3ca998d7.css.map */

@@ -6,6 +6,7 @@ $secondary-color: #760000;
 $tertiary-color: #ffc0ce;
 
 $text-color: #ffffff;
+$text-color2: #000000;
 
 $primary-font: 'Merienda', cursive;
 $secondary-font: 'Roboto Mono', cursive;
@@ -25,7 +26,7 @@ $box-shadow: rgba(0, 0, 0, 0.8) -5px 5px 8px;
 }
 .warning {
   background-color: $tertiary-color;
-  color: $text-color;
+  color: $text-color2;
 }
 
 .primaryFont {

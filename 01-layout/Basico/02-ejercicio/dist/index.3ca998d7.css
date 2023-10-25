@@ -43,6 +43,12 @@ body h1 {
   padding: .5rem;
 }
 
+section {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 .base {
   color: #fff;
   background-color: red;
@@ -56,7 +62,7 @@ body h1 {
 }
 
 .warning {
-  color: #fff;
+  color: #000;
   background-color: #ffc0ce;
 }
 

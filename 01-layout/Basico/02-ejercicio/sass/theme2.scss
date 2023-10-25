@@ -6,6 +6,7 @@ $secondary-color: #000068;
 $tertiary-color: #00ffff;
 
 $text-color: #ffffff;
+$text-color2: #000000;
 
 $primary-font: 'Big Shoulders Stencil Display', cursive;
 $secondary-font: 'Advent Pro';
@@ -22,7 +23,7 @@ $box-shadow: rgba(0, 0, 0, 0.8) 5px 5px 8px;
 }
 .warning {
   background-color: $tertiary-color;
-  color: $text-color;
+  color: $text-color2;
 }
 
 .primaryFont {

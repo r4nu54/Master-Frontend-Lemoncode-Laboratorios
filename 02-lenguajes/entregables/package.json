@@ -1,0 +1,16 @@
+{
+  "name": "entregables",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start:1": "node 01-array-operations.js",
+    "start:2": "node 02-concat.js",
+    "start:3": "node 03-clone-merge.js",
+    "start:4": "node 04-read-books.js",
+    "start:5": "node 05-slot-machine.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
