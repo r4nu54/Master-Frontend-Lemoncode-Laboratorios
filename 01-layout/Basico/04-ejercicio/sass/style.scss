@@ -13,8 +13,8 @@ $color-link: #007bff;
     'card-img'
     'card-body';
   grid-template-rows: 11rem 17.3rem;
-  max-width: 18rem;
-  max-height: 28rem;
+  width: 18rem;
+  height: 28rem;
 
   .card-img {
     grid-area: card-img;
@@ -53,6 +53,8 @@ $color-link: #007bff;
       font-size: 0.8rem;
       color: $color-text;
       padding: 0rem 0.5rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .card-pubdate {
