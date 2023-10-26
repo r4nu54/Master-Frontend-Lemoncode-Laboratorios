@@ -1,4 +1,84 @@
-@use 'base.scss';
+@use 'theme1' as theme;
+// @use 'theme2' as theme;
 
-@use 'theme1.scss';
-// @use 'theme2.scss';
+$primary-color-title: #333333;
+$background-color: #f5f5f5;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: $background-color;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: $primary-color-title;
+  text-align: center;
+  & .container {
+    margin: 2rem auto;
+  }
+  & h1 {
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  align-items: center;
+  width: 90vw;
+  & section {
+    border: 1px solid $primary-color-title;
+    padding: 0.5rem;
+    margin: 2rem 0;
+    width: 130px;
+    height: 80px;
+    border-radius: 0.5rem;
+    margin: 0 0.5rem;
+  }
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.base {
+  display: flex;
+  place-content: center;
+  background-color: theme.$primary-color;
+  color: theme.$text-color;
+}
+
+.important {
+  background-color: theme.$secondary-color;
+  color: theme.$text-color;
+}
+.warning {
+  background-color: theme.$tertiary-color;
+  color: theme.$text-color2;
+}
+
+.primaryFont {
+  font-family: theme.$primary-font;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.secondaryFont {
+  font-family: theme.$secondary-font;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.box {
+  box-shadow: theme.$box-shadow;
+}
