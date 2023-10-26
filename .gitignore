@@ -1,8 +1,4 @@
 
 *node_modules
 *parcel-cache
-
-/01-layout/Basico/01-ejercicio/dist
-/01-layout/Basico/02-ejercicio/dist
-/01-layout/Basico/03-ejercicio/dist
-/01-layout/Basico/04-ejercicio/dist
+*dist
