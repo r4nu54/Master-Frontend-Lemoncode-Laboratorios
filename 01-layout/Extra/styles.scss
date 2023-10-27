@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@200;400;600;800&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+$primary-color: #c5e000;
+$secondary-color: #343c00;
+$terciary-color: #fafbe2;
+$background-color-light: #f5f5f5;
+$background-color-dark: #e6e6e6;
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    font-weight: 300;
+
+    input {
+      padding: 0.2rem;
+      font-weight: 300;
+      font-size: small;
+    }
+  }
+
+  .page-title {
+    background: $primary-color;
+    font-size: larger;
+    padding: 1rem;
+    color: $terciary-color;
+  }
+}
+
+.page-container {
+  display: flex;
+  flex: 1;
+  nav {
+    position: sticky;
+    align-self: flex-start; // para que no se mueva al hacer scroll
+    top: 0;
+    background: $secondary-color;
+    .menu-container {
+      display: flex;
+      flex-direction: column;
+
+      .menu-title {
+        font-size: larger;
+        font-weight: 300;
+        padding: 1rem;
+        color: $terciary-color;
+      }
+      ul > li {
+        background: $terciary-color;
+        border: 1px solid $terciary-color;
+        color: $secondary-color;
+        list-style: none;
+        padding: 0.5rem;
+        font-weight: 400;
+        font-size: small;
+      }
+    }
+  }
+
+  main {
+    background: $background-color-dark;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    flex: 1;
+    padding: 1rem;
+    .list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+      justify-items: center;
+      grid-gap: 1rem;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: $background-color-light;
+        padding: 1rem;
+        gap: 1rem;
+        border: 1px solid $secondary-color;
+        border-radius: 0.2rem;
+        width: 280px;
+        height: 200px;
+
+        img {
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+
+        .member-name {
+          font-size: larger;
+          font-weight: 300;
+          text-align: center;
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: $terciary-color;
+  padding: 2rem;
+  color: $secondary-color;
+  padding: 1rem;
+  font-weight: 400;
+  font-size: small;
+}
+
+@media (width < 1358px) {
+  .page-container {
+    display: flex;
+    flex: 1;
+    main {
+      .list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+
+@media (width < 1064) {
+  .page-container {
+    display: flex;
+    flex: 1;
+    main {
+      .list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media (width < 768) {
+  header {
+    .toolbar {
+      display: none;
+    }
+
+    .page-title {
+      background: $primary-color;
+      font-size: medium;
+      padding: 1rem;
+      color: $terciary-color;
+    }
+  }
+  .page-container {
+    display: flex;
+    flex-direction: column;
+
+    nav {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      position: sticky;
+      align-self: center; // para que no se mueva al hacer scroll
+      top: 0;
+      background: $secondary-color;
+      .menu-container {
+        background: $secondary-color;
+        .menu-title {
+          display: none;
+        }
+        ul {
+          display: flex;
+          justify-content: space-around;
+          padding: 0.5rem;
+          gap: 1rem;
+          li {
+            background: $terciary-color;
+            color: $secondary-color;
+            padding: 0.5rem 1rem;
+            font-weight: 400;
+            font-size: small;
+          }
+        }
+      }
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      .list {
+        grid-template-columns: 1fr;
+        row-gap: 0.2rem;
+        .card {
+          display: flex;
+          flex-direction: row;
+          width: 280px;
+          height: 120px;
+          border: none;
+          img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
