@@ -43,11 +43,10 @@ header {
   display: flex;
   flex: 1;
   nav {
-    position: sticky;
-    align-self: flex-start; // para que no se mueva al hacer scroll
-    top: 0;
     background: $secondary-color;
     .menu-container {
+      position: sticky;
+      top: 0;
       display: flex;
       flex-direction: column;
 
