@@ -1,6 +1,6 @@
 ## Módulo 1 - Layout
 
-### Ejercicio Extra - Pagina Lemoncoders
+### Ejercicio Reto - Warner Live
 
 Desplazarnos a la carpeta del ejercicio y ejecutar el conmando:
 
