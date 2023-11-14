@@ -1,0 +1,17 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  my-lib:
+    specifier: file:../../my-lib
+    version: file:../../my-lib
+
+packages:
+
+  file:../../my-lib:
+    resolution: {directory: ../../my-lib, type: directory}
+    name: my-lib
+    dev: false
