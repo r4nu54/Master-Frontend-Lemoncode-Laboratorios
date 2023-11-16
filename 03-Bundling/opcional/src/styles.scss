@@ -1,0 +1,26 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin: 2rem auto;
+
+  h1 {
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.image {
+  width: 300px;
+}
+
+.text {
+  background: -webkit-linear-gradient(#d9d900, #bbbbbb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: red;
+  font-size: 3rem;
+  font-weight: 600;
+}
