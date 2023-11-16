@@ -8,10 +8,7 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
 
 export default {
   context: path.resolve(__dirname, './src'),
-  entry: {
-    app: './index.js',
-    vendorStyles: ['../node_modules/bootstrap/dist/css/bootstrap.css']
-  },
+  entry: ['./index.js'],
   output: {
     filename: '[name].[chunkhash].js',
     clean: true
@@ -26,33 +23,36 @@ export default {
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        exclude: /node_modules/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
-        test: /\.(png|jpg|jpeg)$/,
+        test: /\.(png|jpg)$/,
         type: 'asset/resource'
-      },
-      {
-        test: /\.html$/i,
-        loader: 'html-loader'
       }
     ]
   },
   devServer: {
-    port: 8080
+    port: 8080,
+    open: true,
+    hot: true,
+    static: {
+      directory: path.join(__dirname, 'src')
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
       template: 'index.html',
-      scriptLoading: 'blocking'
+      filename: 'index.html',
+      scriptLoading: 'blocking',
+      hash: true
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[chunkhash].css',
+      filename: '[name].css',
       chunkFilename: '[id].css'
     })
   ]
