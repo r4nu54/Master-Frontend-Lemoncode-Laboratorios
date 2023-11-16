@@ -16,7 +16,11 @@ body {
 }
 
 .text {
+  background: -webkit-linear-gradient(#d9d900, #bbbbbb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: red;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
 }

@@ -8,17 +8,13 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
 
 export default {
   context: path.resolve(__dirname, './src'),
-  entry: ['./index.js'],
-  output: {
-    filename: '[name].[chunkhash].js',
-    clean: true
-  },
+  entry: ['./index.ts'],
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        use: 'ts-loader'
       },
       {
         test: /\.scss$/,
@@ -36,6 +32,10 @@ export default {
       }
     ]
   },
+  output: {
+    filename: '[name].[chunkhash].js',
+    clean: true
+  },
   devServer: {
     port: 8080,
     open: true,
@@ -48,12 +48,12 @@ export default {
     new HtmlWebpackPlugin({
       template: 'index.html',
       filename: 'index.html',
-      scriptLoading: 'blocking',
-      hash: true
+      scriptLoading: 'blocking'
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
     })
-  ]
+  ],
+  optimization: {}
 }
