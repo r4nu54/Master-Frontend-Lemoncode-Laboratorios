@@ -8,4 +8,4 @@ Desplazarnos a la carpeta del ejercicio y ejecutar el conmando:
 
 y luego:
 
-    `pnpm parcel index.html`
+     `pnpm start`
