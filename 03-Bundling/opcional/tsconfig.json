@@ -6,8 +6,11 @@
     "declaration": false,
     "noImplicitAny": false,
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "jsx": "react-jsx",
     "sourceMap": true,
     "noLib": false,
+    "noEmit": true,
     "skipLibCheck": true,
     "esModuleInterop": true
   },
