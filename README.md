@@ -6,4 +6,4 @@
 [Laboratorio Extra](https://github.com/R4NU54/Master-Frontend-Lemoncode/tree/main/01-layout/Extra)
 
 ## Módulo 2 - Lenguaje
-[Laboratorio  Ejercicios entregables](https://github.com/R4NU54/Master-Frontend-Lemoncode/tree/main/02-lenguajes/entregables)
+[Laboratorio  Ejercicios entregables](https://github.com/R4NU54/Master-Frontend-Lemoncode/tree/main/02-lenguajes)
