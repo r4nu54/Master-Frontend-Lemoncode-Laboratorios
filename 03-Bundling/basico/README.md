@@ -1,4 +1,4 @@
-# Proyecto Básico - Módulo 03 Bundling
+# Ejercicio Básico - Módulo 03 Bundling
 
 Ejercicio basico con WebPack con TypeScript y Sass.
 
@@ -18,8 +18,16 @@ Para instalar las dependencias del proyecto, ejecuta el siguiente comando:
 pnpm install
 ```
 
-Scripts principales
+## Scripts principales
+
+Inicia el servidor de desarrollo.
 
 ```shell
 pnpm start
+```
+
+Genera los archivos de producción.
+
+```shell
+pnpm build
 ```
