@@ -17,21 +17,38 @@ Este proyecto es una plantilla para iniciar proyectos con Vite 5 y React 18.
 
 Para instalar las dependencias del proyecto, ejecuta el siguiente comando:
 
-    `pnpm install`
+```shell
+pnpm install
+```
 
 ## Scripts principales
 
-    'pnpm start': Inicia el servidor de desarrollo.
-    
+Inicia el servidor de desarrollo.
 
-    'pnpm build': Genera los archivos de producción.
-    
+```shell
+pnpm start
+```
 
-    'pnpm preview': Inicia el servidor de producción.
-    
+Genera los archivos de producción.
 
-    'pnpm lint': Ejecuta el linter.
-    
+```
+pnpm build
+```
 
-    'pnpm test': Ejecuta los tests.
-    
+Inicia el servidor de producción.
+
+```
+pnpm preview
+```
+
+Ejecuta el linter.
+
+```
+pnpm lint
+```
+
+Ejecuta los tests.
+
+```
+pnpm test
+```
