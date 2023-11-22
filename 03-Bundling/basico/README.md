@@ -18,8 +18,14 @@ Para instalar las dependencias del proyecto, ejecuta el siguiente comando:
 pnpm install
 ```
 
-Scripts principales
+## Scripts principales
 
 ```shell
 pnpm start
+```
+
+Genera los archivos de producción.
+
+```shell
+pnpm build
 ```
