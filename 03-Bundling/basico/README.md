@@ -1,4 +1,4 @@
-# Proyecto Básico - Módulo 03 Bundling
+# Ejercicio Básico - Módulo 03 Bundling
 
 Ejercicio basico con WebPack con TypeScript y Sass.
 
