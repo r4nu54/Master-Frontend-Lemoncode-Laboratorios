@@ -1,10 +1,10 @@
-# Ejercicio Opcional Pracel - Módulo 03 Bundling
+# Ejercicio Opcional - Módulo 03 Bundling
 
-Ejercicio Opcional con Parcel con React, TypeScript y Sass.
+Ejercicio Opcional con Webpack, React, TypeScript y Sass.
 
 ## Características
 
-- [Parcel](https://parceljs.org/) como bundler.
+- [Webpack](https://webpack.js.org/) como empaquetador de módulos.
 
 - [React](https://es.reactjs.org/) como librería de componentes.
 
@@ -34,4 +34,10 @@ Genera los archivos de producción.
 
 ```shell
 pnpm build
+```
+
+Visualice el tamaño de los archivos de salida del paquete web.
+
+```shell
+pnpm build:perf
 ```
