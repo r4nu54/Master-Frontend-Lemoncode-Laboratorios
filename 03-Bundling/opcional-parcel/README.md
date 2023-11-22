@@ -1,4 +1,4 @@
-# Ejercicio Opcional Pracel - Módulo 03 Bundling
+# Ejercicio Opcional Parcel - Módulo 03 Bundling
 
 Ejercicio Opcional con Parcel con React, TypeScript y Sass.
 
