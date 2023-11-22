@@ -20,6 +20,8 @@ pnpm install
 
 ## Scripts principales
 
+Inicia el servidor de desarrollo.
+
 ```shell
 pnpm start
 ```
