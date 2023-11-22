@@ -22,11 +22,16 @@ Para instalar las dependencias del proyecto, ejecuta el siguiente comando:
 ## Scripts principales
 
     'pnpm start': Inicia el servidor de desarrollo.
+    
 
     'pnpm build': Genera los archivos de producción.
+    
 
     'pnpm preview': Inicia el servidor de producción.
+    
 
     'pnpm lint': Ejecuta el linter.
+    
 
     'pnpm test': Ejecuta los tests.
+    
