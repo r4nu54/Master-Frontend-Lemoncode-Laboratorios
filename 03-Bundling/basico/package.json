@@ -2,12 +2,17 @@
   "name": "laboratorio-03-bundling",
   "version": "1.0.0",
   "description": "",
+  "contributors": [
+    {
+      "name": "Raúl Núñez",
+      "email": "raul.nunez.santiago@outlook.es"
+    }
+  ],
   "main": "index.ts",
   "type": "module",
   "scripts": {
     "start": "webpack serve --mode development",
-    "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
