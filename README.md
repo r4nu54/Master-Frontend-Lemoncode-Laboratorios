@@ -13,6 +13,9 @@
 ## Módulo 3 - Bundling
 
 [Laboratorio Ejercicio Básico](https://github.com/R4NU54/Master-Frontend-Lemoncode/tree/main/03-Bundling/basico)
+
 [Laboratorio Ejercicio Opcional](https://github.com/R4NU54/Master-Frontend-Lemoncode/tree/main/03-Bundling/opcional)
+
 [Laboratorio Ejercicio Opcional Parcel](https://github.com/R4NU54/Master-Frontend-Lemoncode/tree/main/03-Bundling/opcional-parcel)
+
 [Proyecto Semilla Vite+React](https://github.com/R4NU54/Master-Frontend-Lemoncode/tree/main/03-Bundling/bonus)
