@@ -19,3 +19,7 @@
 [Laboratorio Ejercicio Opcional Parcel](https://github.com/R4NU54/Master-Frontend-Lemoncode/tree/main/03-Bundling/opcional-parcel)
 
 [Proyecto Semilla Vite+React](https://github.com/R4NU54/Master-Frontend-Lemoncode/tree/main/03-Bundling/bonus)
+
+## Módulo 4 - Frameworks
+
+[Laboratorio Ejercicio Básico](https://github.com/R4NU54/Master-Frontend-Lemoncode/tree/main/04-Frameworks/basico)
