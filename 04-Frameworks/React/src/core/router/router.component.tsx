@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { switchRoutes } from '@/core/router/routes';
 
-import { ListPage, DetailPage } from '@/scenes';
+import { HomePage, ListPage, DetailPage } from '@/scenes';
 
 export const RouterComponent: React.FC = () => {
   return (
@@ -11,6 +11,10 @@ export const RouterComponent: React.FC = () => {
         <Routes>
           <Route
             path={switchRoutes.root}
+            element={<HomePage />}
+          />
+          <Route
+            path={switchRoutes.list}
             element={<ListPage />}
           />
           <Route

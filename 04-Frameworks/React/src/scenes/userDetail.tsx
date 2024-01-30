@@ -1,24 +1,33 @@
 import { Link, useParams } from 'react-router-dom';
 import { routes } from '@/core/router/routes';
 
-import { AppLayout } from '@/layouts/app.layout';
-
-import { Card, CardHeader, buttonVariants } from '@/components/ui';
+import { Box, Card, CardContent, Typography } from '@mui/material';
 
 export const DetailPage: React.FC = () => {
-  const { id } = useParams();
+  const { login } = useParams<{ login: string }>();
   return (
-    <AppLayout>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+      }}>
       <Card>
-        <CardHeader></CardHeader>
-        <h3>Id: {id}</h3>
-        <Link
-          className={buttonVariants({ variant: 'destructive', size: 'lg' })}
-          to={routes.root}
-        >
-          Atras
-        </Link>
+        <CardContent>
+          <Typography
+            variant='h5'
+            component='h2'>
+            {login}
+          </Typography>
+          <Typography
+            variant='body2'
+            component='p'>
+            {'description'}
+          </Typography>
+          <Link to={routes.list}>Atrás</Link>
+        </CardContent>
       </Card>
-    </AppLayout>
+    </Box>
   );
 };

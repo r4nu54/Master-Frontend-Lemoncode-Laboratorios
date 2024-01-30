@@ -4,7 +4,7 @@ import { OrgProvider } from './core/providers/org.context';
 function App() {
   return (
     <OrgProvider>
-      <RouterComponent />;
+      <RouterComponent />
     </OrgProvider>
   );
 }

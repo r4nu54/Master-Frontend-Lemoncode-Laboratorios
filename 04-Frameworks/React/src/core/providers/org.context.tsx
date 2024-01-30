@@ -1,16 +1,15 @@
 import { createContext, useState } from 'react';
 
-import { OrgModel } from '@/core/providers/org.vm';
+import { OrgModel } from '@/core/models/org.vm';
 
 interface Props {
   children: React.ReactNode;
 }
 
-export const OrgContext = createContext<OrgModel>({ orgName: 'lemoncode', setOrgName: () => {} });
+export const OrgContext = createContext<OrgModel>({ orgName: '', setOrgName: () => {} });
 
 export const OrgProvider: React.FC<Props> = ({ children }) => {
-  const [orgName, setOrgName] = useState<string>('lemoncode');
+  const [orgName, setOrgName] = useState<string>('Lemoncode');
 
-  console.log(orgName);
-  return <OrgContext.Provider value={{ orgName, setOrgName }}>{children}</OrgContext.Provider>;
+  return <OrgContext.Provider value={{ orgName: orgName, setOrgName }}>{children}</OrgContext.Provider>;
 };
