@@ -22,4 +22,4 @@
 
 ## Módulo 4 - Frameworks
 
-[Laboratorio Ejercicio Básico](https://github.com/R4NU54/Master-Frontend-Lemoncode/tree/main/04-Frameworks/basico)
+[Laboratorio React]([https://github.com/R4NU54/Master-Frontend-Lemoncode-Laboratorios/tree/main/04)
