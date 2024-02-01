@@ -1,3 +1,3 @@
 export * from './homePage';
-export * from './userDetail';
-export * from './userListPage';
+export * from './MemberDetail';
+export * from './MemberListPage';
