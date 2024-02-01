@@ -4,9 +4,9 @@ import { routes } from '@/core';
 
 import { Button, Card, CardContent, CardActions, Typography } from '@mui/material';
 
-import { MemberEntity } from '@/core/models/member.vm';
+import { MemberEntityApi } from '@/core/models';
 
-export const CardComponent = (member: MemberEntity) => {
+export const CardComponent = (member: MemberEntityApi) => {
   return (
     <Card className='flex flex-col items-center w-[280px]'>
       <CardContent className='flex flex-col items-center gap-1'>
