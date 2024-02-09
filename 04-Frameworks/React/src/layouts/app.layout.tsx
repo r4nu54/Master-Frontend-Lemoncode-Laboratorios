@@ -4,7 +4,7 @@ export const AppLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <>
       <HeaderComponent />
-      <main>{children}</main>
+      <main className="p-5">{children}</main>
       <FooterComponent />
     </>
   );
