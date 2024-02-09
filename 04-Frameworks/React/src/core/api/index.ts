@@ -1,1 +1,1 @@
-export * from './getMember';
+export * from './api';
