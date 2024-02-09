@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getMembersByLogin } from '@/core/api';
 import { MemberDetailApi } from '@/core/models';
-import { CardDetailComponent } from '@/components/CardDetailComponent';
+import { CardDetailComponent } from '@/components';
 import { AppLayout } from '@/layouts/app.layout';
 
 export const DetailPage: React.FC = () => {
