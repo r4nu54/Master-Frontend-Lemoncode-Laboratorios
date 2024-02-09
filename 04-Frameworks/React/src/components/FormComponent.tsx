@@ -1,25 +1,12 @@
-import { useContext, useState } from 'react';
-import { OrgContext } from '@/core/providers/org.context';
 import { Button } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import { useSetOrg } from '@/hooks/useSetOrg';
 
 export const FormComponent = () => {
-  const [inputValue, setInputValue] = useState<string>('');
-
-  const { orgName, setOrgName } = useContext(OrgContext);
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.target.value);
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    if (inputValue === '') return;
-    setOrgName(inputValue);
-  };
+  const { orgName, handleInputChange, handleSubmit } = useSetOrg();
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2 p-2 my-5 place-content-center">
+    <form onSubmit={handleSubmit} className="flex gap-2 p-2 my-2 place-content-center">
       <input
         defaultValue={orgName}
         type="text"
