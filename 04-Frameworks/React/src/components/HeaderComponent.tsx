@@ -1,11 +1,8 @@
 import { useContext } from 'react';
-import { OrgContext } from '@/core/providers/org.context';
-
+import { OrgContext } from '@/core/providers';
 import { Link } from 'react-router-dom';
 import { routes } from '@/core';
-
 import { AppBar, Button, Toolbar } from '@mui/material';
-
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import HomeIcon from '@mui/icons-material/Home';
