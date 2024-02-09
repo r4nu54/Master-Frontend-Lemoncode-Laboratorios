@@ -1,9 +1,6 @@
 import { Link } from 'react-router-dom';
-
 import { routes } from '@/core';
-
 import { Button, Card, CardContent, CardActions, Typography, CardHeader, CardMedia } from '@mui/material';
-
 import { MemberDetailApi } from '@/core/models';
 
 export const CardDetailComponent = (memberDetail: MemberDetailApi) => {

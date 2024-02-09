@@ -1,7 +1,5 @@
 import { useContext, useState } from 'react';
-
 import { OrgContext } from '@/core/providers/org.context';
-
 import { Button } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -21,20 +19,14 @@ export const FormComponent = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className='flex gap-2 p-2 my-5 place-content-center'>
+    <form onSubmit={handleSubmit} className="flex gap-2 p-2 my-5 place-content-center">
       <input
         defaultValue={orgName}
-        type='text'
-        className='p-2 border-2 focus:border-[#1b5e20] rounded-md'
+        type="text"
+        className="p-2 border-2 focus:border-[#1b5e20] rounded-md"
         onChange={handleInputChange}
       />
-      <Button
-        type='submit'
-        variant='contained'
-        color='success'
-        startIcon={<SearchIcon />}>
+      <Button type="submit" variant="contained" color="success" startIcon={<SearchIcon />}>
         Buscar
       </Button>
     </form>

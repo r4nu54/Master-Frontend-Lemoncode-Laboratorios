@@ -1,9 +1,6 @@
 import { Link } from 'react-router-dom';
-
 import { routes } from '@/core';
-
 import { Button, Card, CardContent, CardActions, Typography } from '@mui/material';
-
 import { MemberEntityApi } from '@/core/models';
 
 export const CardComponent = (member: MemberEntityApi) => {
