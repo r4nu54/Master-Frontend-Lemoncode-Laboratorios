@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "es6",
+    "module": "es6",
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "declaration": false,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "jsx": "react",
+    "noLib": false,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "types": [
+      "node",
+      "jest"
+    ],
+    "baseUrl": "./src/",
+    "paths": {
+      "common-app": [
+        "common-app"
+      ],
+      "common": [
+        "common"
+      ],
+      "core": [
+        "core"
+      ],
+      "layouts": [
+        "layouts"
+      ],
+      "pods": [
+        "pods"
+      ],
+      "scenes": [
+        "scenes"
+      ]
+    }
+  },
+  "include": [
+    "./src/**/*",
+    "./config/test/setup.ts",
+    "./global.types.d.ts"
+  ]
+}
