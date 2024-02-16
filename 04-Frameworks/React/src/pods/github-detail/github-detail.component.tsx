@@ -1,10 +1,12 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { getMembersByLogin } from './api';
-import { MemberDetailApi } from './api';
-import { CardDetailComponent } from './components';
 import { AppLayout } from '@/layouts/app.layout';
-import { CardDetailSkeletonComponent } from './components';
+import {
+  getMembersByLogin,
+  MemberDetailApi,
+  GitHubCardDetailComponent,
+  GitHubCardDetailSkeletonComponent,
+} from '@/pods/github-detail';
 
 export const DetailPage: React.FC = () => {
   const { login } = useParams();
@@ -17,7 +19,9 @@ export const DetailPage: React.FC = () => {
 
   return (
     <AppLayout>
-      <div>{!memberDetail ? <CardDetailSkeletonComponent /> : <CardDetailComponent {...memberDetail!} />}</div>
+      <div>
+        {!memberDetail ? <GitHubCardDetailSkeletonComponent /> : <GitHubCardDetailComponent {...memberDetail!} />}
+      </div>
     </AppLayout>
   );
 };

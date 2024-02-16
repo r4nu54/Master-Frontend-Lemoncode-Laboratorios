@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { routes } from '@/core';
 import { Button, Card, CardContent, Typography, CardHeader, CardMedia } from '@mui/material';
-import { MemberDetailApi } from '@/core/models';
+import { MemberDetailApi } from '@/pods/github-detail';
 
-export const CardDetailComponent = (memberDetail: MemberDetailApi) => {
+export const GitHubCardDetailComponent = (memberDetail: MemberDetailApi) => {
   return (
-    <section className="flex flex-col justify-center items-center gap-5">
+    <section className="flex flex-col justify-center items-center gap-5 mt-5">
       <Card className="flex" sx={{ maxWidth: 600 }}>
         <CardHeader
           className="flex flex-col justify-center items-center gap-2"

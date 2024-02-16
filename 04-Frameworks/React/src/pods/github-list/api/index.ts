@@ -1,2 +1,2 @@
 export * from './api';
-export * from './member.vm';
+export * from './api.vm';

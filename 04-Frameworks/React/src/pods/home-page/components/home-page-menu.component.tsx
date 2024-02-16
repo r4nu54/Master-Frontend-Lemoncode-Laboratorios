@@ -11,7 +11,7 @@ export const HomePageMenu = () => {
         <Link to={routes.list}>GitHub API</Link>
       </Button>
       <Button color="success" variant="contained">
-        <Link to={routes.list}>Rick and Morty API</Link>
+        <Link to={routes.root}>The Star Wars API (En Desarrolo)</Link>
       </Button>
     </Box>
   );

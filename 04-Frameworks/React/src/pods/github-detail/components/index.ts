@@ -1,2 +1,2 @@
-export * from './CardDetailComponent';
-export * from './CardDetailSkeletonComponent';
+export * from './github-detail-card-detail-skeleton.component';
+export * from './github-detail-card-detail.component';

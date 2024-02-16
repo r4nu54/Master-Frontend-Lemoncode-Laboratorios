@@ -1,8 +1,8 @@
 import { Button } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import { useSetOrg } from '@/hooks/useSetOrg';
+import { useSetOrg } from '@/pods/github-list/';
 
-export const FormComponent = () => {
+export const GithubListFormComponent = () => {
   const { orgName, handleInputChange, handleSubmit } = useSetOrg();
 
   return (

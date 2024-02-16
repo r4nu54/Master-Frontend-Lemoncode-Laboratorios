@@ -1,6 +1,6 @@
-export const CardDetailSkeletonComponent = () => {
+export const GitHubCardDetailSkeletonComponent = () => {
   return (
-    <section className=" flex flex-col justify-center items-center gap-5">
+    <section className=" flex flex-col justify-center items-center gap-5 mt-5">
       <div
         role="status"
         className="space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center">
