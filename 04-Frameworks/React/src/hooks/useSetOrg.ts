@@ -1,4 +1,4 @@
-import { OrgContext } from '@/core/providers';
+import { OrgContext } from '@/core/providers/org-context';
 import { useContext, useState } from 'react';
 
 export const useSetOrg = () => {
