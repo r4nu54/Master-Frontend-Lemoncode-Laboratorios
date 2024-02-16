@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { OrgContext } from '@/core/providers';
+import { OrgContext } from '@/core/providers/org-context';
 import { Link } from 'react-router-dom';
 import { routes } from '@/core';
 import { AppBar, Button, Toolbar } from '@mui/material';

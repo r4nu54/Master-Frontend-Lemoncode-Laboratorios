@@ -1,6 +1,6 @@
 import { createContext, useState } from 'react';
 
-import { OrgModel } from '@/core/models';
+import { OrgModel } from './index';
 
 interface Props {
   children: React.ReactNode;

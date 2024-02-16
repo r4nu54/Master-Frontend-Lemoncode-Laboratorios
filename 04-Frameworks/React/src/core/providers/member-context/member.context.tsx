@@ -1,7 +1,8 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { getMembersByOrg } from '@/core/api';
-import { MembersEntityApi, MemberEntityApi } from '@/core/models';
-import { OrgContext } from './org.context';
+import { getMembersByOrg } from '@/pods/github-list/api';
+import { MemberEntityApi } from '@/pods/github-list/api';
+import { MembersEntityApi } from './index';
+import { OrgContext } from '@/core/providers/org-context';
 
 interface Props {
   children: React.ReactNode;

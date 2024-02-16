@@ -1,5 +1,6 @@
 import { RouterComponent } from '@/core';
-import { OrgProvider, MemberProvider } from './core/providers';
+import { OrgProvider } from '@/core/providers/org-context';
+import { MemberProvider } from '@/core/providers/member-context';
 
 function App() {
   return (
