@@ -13,10 +13,6 @@
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "types": [
-      "node",
-      "jest"
-    ],
     "baseUrl": "./src/",
     "paths": {
       "common-app": [
