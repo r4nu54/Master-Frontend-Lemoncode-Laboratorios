@@ -23,3 +23,8 @@
 ## Módulo 4 - Frameworks
 
 [Laboratorio React](https://github.com/R4NU54/Master-Frontend-Lemoncode-Laboratorios/tree/main/04-Frameworks/React)
+
+
+## Módulo 5 - Testing
+
+[Laboratorio Testing](https://github.com/R4NU54/Master-Frontend-Lemoncode-Laboratorios/tree/main/05-Testing)
