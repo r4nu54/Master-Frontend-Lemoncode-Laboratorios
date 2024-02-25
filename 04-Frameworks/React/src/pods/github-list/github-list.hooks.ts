@@ -3,6 +3,7 @@ import { useContext, useState } from 'react';
 
 export const useSetOrg = () => {
   const [inputValue, setInputValue] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
 
   const { orgName, setOrgName } = useContext(OrgContext);
 
@@ -14,10 +15,12 @@ export const useSetOrg = () => {
     event.preventDefault();
     if (inputValue === '') return;
     setOrgName(inputValue);
+    setLoading(true);
   };
 
   return {
     orgName,
+    loading,
     handleInputChange,
     handleSubmit,
   };
