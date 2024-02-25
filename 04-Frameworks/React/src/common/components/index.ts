@@ -1,2 +1,3 @@
-export * from './FooterComponent';
-export * from './HeaderComponent';
+export * from './footerComponent';
+export * from './headerComponent';
+export * from './notFound';
