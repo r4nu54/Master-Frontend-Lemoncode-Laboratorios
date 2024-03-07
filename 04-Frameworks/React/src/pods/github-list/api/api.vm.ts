@@ -1,3 +1,8 @@
+export interface ResponseApi {
+  lastPageApi: number;
+  data: MemberEntityApi[];
+}
+
 export interface MemberEntityApi {
   login: string;
   id: number;

@@ -1,9 +1,8 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import { getMembersByOrg } from '@/pods/github-list/api';
-import { MemberEntityApi } from '@/pods/github-list/api';
+import { getMembersByOrg, MemberEntityApi } from '@/pods/github-list';
 import { MembersEntityApi } from './index';
-import { OrgContext } from '@/core/providers/org-context';
-import { PaginationContext } from '@/core/providers/pagination-context';
+import { OrgContext, PaginationContext } from '@/core/providers';
+import { LastPage } from '@mui/icons-material';
 
 interface Props {
   children: React.ReactNode;
@@ -18,17 +17,21 @@ export const MemberProvider: React.FC<Props> = ({ children }) => {
   const [members, setMembers] = useState<MemberEntityApi[]>([]);
 
   const { orgName, setIsError } = useContext(OrgContext);
-  const { currentPage, perPage } = useContext(PaginationContext);
+  const { currentPage, setLastPage, perPage } = useContext(PaginationContext);
 
   useEffect(() => {
     getMembersByOrg(orgName, perPage, currentPage)
-      .then(setMembers)
+      .then(({ data, lastPageApi }) => {
+        setMembers(data);
+        if (!lastPageApi) return;
+        setLastPage(lastPageApi);
+      })
       .then(() => setIsError(false))
       .catch(error => {
-        if (error.response.status === 404) {
+        if (error.response?.status === 404) {
           setIsError(true);
         }
       });
-  }, [orgName, currentPage, setIsError]);
+  }, [orgName, LastPage, currentPage, setIsError]);
   return <MemberContext.Provider value={{ members, setMembers }}>{children}</MemberContext.Provider>;
 };

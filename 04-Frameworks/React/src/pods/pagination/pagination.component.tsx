@@ -1,20 +1,23 @@
 import { useContext } from 'react';
+import { PaginationContext, OrgContext } from '@/core/providers';
 import Pagination from '@mui/material/Pagination';
-import { PaginationContext } from '@/core/providers/pagination-context';
 
 export const PaginationComponent = () => {
-  const { setCurrentPage, currentPage } = useContext(PaginationContext);
+  const { isError } = useContext(OrgContext);
+  const { setCurrentPage, currentPage, lastPage } = useContext(PaginationContext);
 
-  const nextPage = () => {
-    setCurrentPage(currentPage + 1);
+  console.log(currentPage);
+  console.log(lastPage);
+
+  const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
+    setCurrentPage(value);
   };
 
-  const prevPage = () => {
-    setCurrentPage(currentPage - 1);
-  };
   return (
     <>
-      <Pagination count={5} variant="outlined" shape="rounded" />
+      {!isError && (
+        <Pagination count={lastPage} page={currentPage} variant="outlined" shape="rounded" onChange={handleChange} />
+      )}
     </>
   );
 };
