@@ -7,14 +7,7 @@ export const RouterComponent: React.FunctionComponent = () => {
   return (
     <HashRouter>
       <Routes>
-        <Route
-          path={switchRoutes.characterCollection}
-          element={<CharacterCollectionScene />}
-        />
-        <Route
-          path={switchRoutes.createCharacter}
-          element={<CharacterScene />}
-        />
+        <Route path={switchRoutes.characterCollection} element={<CharacterCollectionScene />} />
         <Route path={switchRoutes.editCharacter} element={<CharacterScene />} />
         <Route
           path={switchRoutes.root}
