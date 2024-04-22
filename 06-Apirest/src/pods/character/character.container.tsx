@@ -2,17 +2,11 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import * as api from './api';
 import { createEmptyCharater, Character } from './character.vm';
-import {
-  mapCharacterFromApiToVm,
-  mapCharacterFromVmToApi,
-} from './character.mappers';
-import { Lookup } from 'common/models';
+import { mapCharacterFromApiToVm, mapCharacterFromVmToApi } from './character.mappers';
 import { CharacterComponent } from './character.component';
 
 export const CharacterContainer: React.FunctionComponent = (props) => {
-  const [character, setCharacter] = React.useState<Character>(
-    createEmptyCharater()
-  );
+  const [character, setCharacter] = React.useState<Character>(createEmptyCharater());
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 

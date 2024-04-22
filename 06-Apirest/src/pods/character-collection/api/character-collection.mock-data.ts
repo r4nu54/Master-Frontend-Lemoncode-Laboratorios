@@ -1,6 +1,6 @@
-import { CharacterEntityApi } from './character-collection.api-model';
+import { Character } from './character-collection.api-model';
 
-export const mockCharacterCollection: CharacterEntityApi[] = [
+export const mockCharacterCollection: Character[] = [
   {
     id: 1,
     name: 'Rick Sanchez',
@@ -72,6 +72,7 @@ export const mockCharacterCollection: CharacterEntityApi[] = [
     ],
     url: 'https://rickandmortyapi.com/api/character/1',
     created: '2017-11-04T18:48:46.250Z',
+    bestSentences: '',
   },
   {
     id: 2,
@@ -144,6 +145,7 @@ export const mockCharacterCollection: CharacterEntityApi[] = [
     ],
     url: 'https://rickandmortyapi.com/api/character/2',
     created: '2017-11-04T18:50:21.651Z',
+    bestSentences: '',
   },
   {
     id: 3,
@@ -207,6 +209,7 @@ export const mockCharacterCollection: CharacterEntityApi[] = [
     ],
     url: 'https://rickandmortyapi.com/api/character/3',
     created: '2017-11-04T19:09:56.428Z',
+    bestSentences: '',
   },
   {
     id: 4,
@@ -270,5 +273,6 @@ export const mockCharacterCollection: CharacterEntityApi[] = [
     ],
     url: 'https://rickandmortyapi.com/api/character/4',
     created: '2017-11-04T19:22:43.665Z',
+    bestSentences: '',
   },
 ];

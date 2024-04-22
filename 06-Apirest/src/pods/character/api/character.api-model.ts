@@ -5,15 +5,11 @@ export interface Character {
   species: string;
   type: string;
   gender: string;
-  origin: Location;
-  location: Location;
+  origin: { name: string; url: string };
+  location: { name: string; url: string };
   image: string;
   episode: string[];
   url: string;
   created: string;
-}
-
-export interface Location {
-  name: string;
-  url: string;
+  bestSentences: '';
 }

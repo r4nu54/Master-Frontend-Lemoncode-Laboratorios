@@ -1,13 +1,8 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
 import Button from '@mui/material/Button';
-import {
-  TextFieldComponent,
-  SelectComponent,
-  RatingComponent,
-} from 'common/components';
-import { Lookup } from 'common/models';
-import { formValidation } from './character.validations';
+import { TextFieldComponent } from 'common/components';
+
 import { Character } from './character.vm';
 import * as classes from './character.styles';
 
@@ -20,20 +15,17 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
   const { character, onSave } = props;
 
   return (
-    <Formik
-      onSubmit={onSave}
-      initialValues={character}
-      enableReinitialize={true}
-      validate={formValidation.validateForm}
-    >
+    <Formik onSubmit={onSave} initialValues={character} enableReinitialize={true}>
       {() => (
         <Form className={classes.root}>
-          <TextFieldComponent name="name" label="Name" />
-          <TextFieldComponent name="address" label="Address" />
-          <RatingComponent name="rating" max={5} />
+          <TextFieldComponent name="name" label="Name" InputProps={{ disabled: true }} />
+
+          <TextFieldComponent name="status" label="Status" InputProps={{ disabled: true }} />
+
+          <TextFieldComponent name="image" label="Image" InputProps={{ disabled: true }} />
           <TextFieldComponent
-            name="description"
-            label="Description"
+            name="bestSentences"
+            label="Best sentencies"
             multiline={true}
             rows={3}
           />

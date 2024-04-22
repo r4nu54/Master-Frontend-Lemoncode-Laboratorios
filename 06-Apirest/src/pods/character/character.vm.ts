@@ -1,17 +1,15 @@
 export interface Character {
-  id: string;
+  id: number;
   name: string;
-  description: string;
-  rating: number;
-  address: string;
-  city: string;
+  status: string;
+  image: string;
+  bestSentences: string;
 }
 
 export const createEmptyCharater = (): Character => ({
-  id: '',
+  id: 0,
   name: '',
-  description: '',
-  rating: 3,
-  address: '',
-  city: '',
+  status: '',
+  image: '',
+  bestSentences: '',
 });
