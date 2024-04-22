@@ -4,7 +4,7 @@
   "description": "Rest API demos",
   "main": "index.js",
   "scripts": {
-    "start": "run-p -l type-check:watch start:dev start:server",
+    "start": "run-p -l type-check:watch start:dev ",
     "start:dev": "webpack serve --config ./config/webpack/dev.js",
     "start:server": "cd server && npm run mock-server",
     "build": "run-p -l type-check build:prod",
@@ -18,19 +18,19 @@
   "license": "MIT",
   "dependencies": {
     "@emotion/css": "^11.11.2",
-    "@emotion/react": "^11.11.1",
+    "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@lemoncode/fonk": "^1.5.4",
     "@lemoncode/fonk-formik": "^4.0.1",
     "@lemoncode/fonk-min-number-validator": "^1.2.0",
-    "@mui/icons-material": "^5.14.9",
-    "@mui/material": "^5.14.10",
-    "axios": "^1.5.0",
+    "@mui/icons-material": "^5.15.12",
+    "@mui/material": "^5.15.12",
+    "axios": "^1.6.7",
     "formik": "^2.4.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.16.0",
-    "regenerator-runtime": "^0.14.0"
+    "react-router-dom": "^6.22.3",
+    "regenerator-runtime": "^0.14.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.15",
@@ -51,7 +51,7 @@
     "react-refresh": "^0.14.0",
     "rimraf": "^5.0.1",
     "style-loader": "^3.3.3",
-    "typescript": "^5.2.2",
+    "typescript": "^5.4.2",
     "url-loader": "^4.1.1",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
