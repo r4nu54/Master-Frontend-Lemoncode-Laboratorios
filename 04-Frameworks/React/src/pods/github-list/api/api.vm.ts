@@ -1,5 +1,5 @@
 export interface ResponseApi {
-  lastPageApi: number;
+  lastPageApi: number | undefined;
   data: MemberEntityApi[];
 }
 

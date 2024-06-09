@@ -16,15 +16,20 @@ export const MemberContext = createContext<MembersEntityApi>({
 export const MemberProvider: React.FC<Props> = ({ children }) => {
   const [members, setMembers] = useState<MemberEntityApi[]>([]);
 
-  const { orgName, setIsError } = useContext(OrgContext);
-  const { currentPage, setLastPage, perPage } = useContext(PaginationContext);
+  const { orgName, setIsError, isNewOrg, setIsNewOrg } = useContext(OrgContext);
+  const { currentPage, setCurrentPage, setLastPage, perPage } = useContext(PaginationContext);
 
   useEffect(() => {
     getMembersByOrg(orgName, perPage, currentPage)
       .then(({ data, lastPageApi }) => {
         setMembers(data);
-        if (!lastPageApi) return;
-        setLastPage(lastPageApi);
+        if (lastPageApi) {
+          setLastPage(lastPageApi);
+        }
+        if (isNewOrg) {
+          setCurrentPage(1);
+          setIsNewOrg(false);
+        }
       })
       .then(() => setIsError(false))
       .catch(error => {
@@ -32,6 +37,6 @@ export const MemberProvider: React.FC<Props> = ({ children }) => {
           setIsError(true);
         }
       });
-  }, [orgName, LastPage, currentPage, setIsError]);
+  }, [orgName, currentPage]);
   return <MemberContext.Provider value={{ members, setMembers }}>{children}</MemberContext.Provider>;
 };

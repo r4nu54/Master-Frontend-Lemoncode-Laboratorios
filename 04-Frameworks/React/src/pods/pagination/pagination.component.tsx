@@ -6,9 +6,6 @@ export const PaginationComponent = () => {
   const { isError } = useContext(OrgContext);
   const { setCurrentPage, currentPage, lastPage } = useContext(PaginationContext);
 
-  console.log(currentPage);
-  console.log(lastPage);
-
   const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
     setCurrentPage(value);
   };

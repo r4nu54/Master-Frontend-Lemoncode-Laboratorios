@@ -9,20 +9,14 @@ export const getMembersByOrg = async (org: string, perPage: number, currentPage:
   const linkHeader = response.headers['link'];
   const data: MemberEntityApi[] = response.data;
 
-  const lastPageApi = linkHeader.split(',').map((link: string) => {
-    if (link.includes('rel="last"')) {
-      const regex = /page=(\d+)/;
-      const match = link.match(regex);
-      if (match) {
-        const lastPage = parseInt(match[1]);
-        return lastPage;
-      }
-    }
-  });
-
-  if (!lastPageApi) {
-    return { data, lastPageApi };
+  // If there is no link header, there is no last page so is not the first call
+  const linkForLastPage = linkHeader.split(',').find((link: string) => link.includes('rel="last"'));
+  if (!linkForLastPage) {
+    return { data, lastPageApi: undefined };
   }
 
-  return { data, lastPageApi: lastPageApi[1] };
+  const newDirtyURl = linkForLastPage.split(';')[0].replace('<', '').replace('>', '');
+  const lastPageApi = parseInt(newDirtyURl.split('&')[0].split('=')[1]);
+
+  return { data, lastPageApi };
 };

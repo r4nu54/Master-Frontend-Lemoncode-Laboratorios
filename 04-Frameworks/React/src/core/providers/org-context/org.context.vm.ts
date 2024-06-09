@@ -3,4 +3,6 @@ export interface OrgModel {
   setOrgName: (orgName: string) => void;
   isError: boolean;
   setIsError: (isError: boolean) => void;
+  isNewOrg: boolean;
+  setIsNewOrg: (isNewOrg: boolean) => void;
 }
