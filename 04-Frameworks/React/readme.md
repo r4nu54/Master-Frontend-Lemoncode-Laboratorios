@@ -87,7 +87,6 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ## ✨ Próximas Mejoras
 
-- [ ] Implementación de la API de Star Wars
 - [ ] Pruebas unitarias y de integración
 - [ ] Mejoras en la accesibilidad
 - [ ] Sistema de caché para peticiones
