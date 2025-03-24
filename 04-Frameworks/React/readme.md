@@ -1,6 +1,6 @@
-# Laboratorio React - GitHub & Star Wars API
+# Laboratorio React - GitHub
 
-Este proyecto es una aplicación web desarrollada con React que proporciona una interfaz para interactuar con la API de GitHub y la API de Star Wars (en desarrollo).
+Este proyecto es una aplicación web desarrollada con React que proporciona una interfaz para interactuar con la API de GitHub.
 
 ## 🚀 Características
 
