@@ -1,11 +1,11 @@
 import { OrgContext } from '@/core/providers/org-context';
+import { MemberContext } from '@/core/providers/member-context';
 import { useContext, useState } from 'react';
 
 export const useSetOrg = () => {
   const [inputValue, setInputValue] = useState<string>('');
-  const [loading, setLoading] = useState<boolean>(false);
-
   const { orgName, setOrgName, setIsNewOrg } = useContext(OrgContext);
+  const { isLoading } = useContext(MemberContext);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
@@ -16,12 +16,11 @@ export const useSetOrg = () => {
     if (inputValue === '') return;
     setOrgName(inputValue);
     setIsNewOrg(true);
-    setLoading(true);
   };
 
   return {
     orgName,
-    loading,
+    loading: isLoading,
     handleInputChange,
     handleSubmit,
   };
