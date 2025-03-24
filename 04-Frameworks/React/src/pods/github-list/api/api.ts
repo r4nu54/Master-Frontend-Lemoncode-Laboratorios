@@ -1,13 +1,17 @@
-import axios from 'axios';
+import { githubApi } from '@/core/api/github.api';
 import { MemberEntityApi, ResponseApi } from './index';
 
 export const getMembersByOrg = async (org: string, perPage: number, currentPage: number): Promise<ResponseApi> => {
-  const url = `https://api.github.com/orgs/${org}/members?page=${currentPage}&per_page=${perPage}`;
+  const url = `/orgs/${org}/members?page=${currentPage}&per_page=${perPage}`;
 
-  const response = await axios.get(url);
+  const response = await githubApi.get(url);
 
   const linkHeader = response.headers['link'];
   const data: MemberEntityApi[] = response.data;
+
+  if (!linkHeader) {
+    return { data, lastPageApi: undefined };
+  }
 
   // If there is no link header, there is no last page so is not the first call
   const linkForLastPage = linkHeader.split(',').find((link: string) => link.includes('rel="last"'));
